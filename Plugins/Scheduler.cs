@@ -100,7 +100,7 @@ namespace Lumpn
                 return false;
             }
 
-            entry = entries.Dequeue();
+            entry = entries.Pop();
             return true;
         }
 
@@ -114,7 +114,7 @@ namespace Lumpn
             Debug.Assert(method != null, "method must not be null");
 
             var entry = new Entry(token, method, owner, state, time + delaySeconds, repeatInterval);
-            entries.Enqueue(entry);
+            entries.Push(entry);
         }
     }
 }
