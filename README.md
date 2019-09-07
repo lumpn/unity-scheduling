@@ -2,7 +2,7 @@
 A non-allocating Invoke/InvokeRepeating scheduler for Unity
 
 ## Installation
-Download the entire repository from https://github.com/lumpn/unity-scheduler and put it into your Unity project's *Asset* directory.
+Download the entire repository from https://github.com/lumpn/unity-scheduler and put it into a subdirectory of your Unity project's *Asset* directory.
 For example `MyUnityProject/Assets/ThirdParty/lumpn/unity-scheduler`.
 
 ## Usage
