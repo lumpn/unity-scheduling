@@ -35,7 +35,7 @@ namespace Lumpn
             this.heap = new List<T>(initialCapacity);
         }
 
-        public void Enqueue(IEnumerable<T> items)
+        public void Push(IEnumerable<T> items)
         {
             int prevCount = Count;
             heap.AddRange(items);
@@ -47,13 +47,13 @@ namespace Lumpn
             }
         }
 
-        public void Enqueue(T item)
+        public void Push(T item)
         {
             heap.Add(item);
             BubbleUp(LastIndex);
         }
 
-        public T Dequeue()
+        public T Pop()
         {
             T result = heap[0];
             Swap(LastIndex, 0);
