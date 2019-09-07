@@ -14,6 +14,13 @@ void DoInvoke()
 
 static void InvokedMethod(object owner, object state)
 {
+    var myClass = (MyClass)owner;
+    var myState = (MyState)state;
+    myClass.InvokeMethod(myState);
+}
+
+void InvokedMethod(MyState state)
+{
     // ...
 }
 ```
@@ -21,3 +28,6 @@ static void InvokedMethod(object owner, object state)
 ### Notes
 * For convencience, create a singleton scheduler. See `SchedulerHost` for details.
 * Schedulers should get updated every frame. See `SchedulerHost` for details.
+* The invoked method should be `static` to avoid capturing the `this` reference, which would generate garbage.
+* For non-static methods, you can pass `this` via the `owner` parameter.
+* Optionally additional state can be passed via the `state` parameter.
