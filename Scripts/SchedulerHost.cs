@@ -14,7 +14,7 @@ namespace Lumpn
 
         [field: System.NonSerialized] public Scheduler scheduler { get; private set; }
 
-        void Awake()
+        void Start()
         {
             scheduler = new Scheduler(Time.time, initialCapacity);
             main = this;

@@ -12,6 +12,9 @@ namespace Lumpn
     public class InvokeDemo : MonoBehaviour
     {
         [SerializeField] private SchedulerHost host;
+        [SerializeField] private float invokeDelay = 3f;
+        [SerializeField] private float repeatDelay = 1f;
+        [SerializeField] private float repeatInterval = 5f;
 
         [System.NonSerialized] private CancellationToken token = new CancellationToken();
         [System.NonSerialized] private int invokeCounter;
@@ -21,13 +24,17 @@ namespace Lumpn
         [ContextMenu("Invoke")]
         public void DoInvoke()
         {
-            host.scheduler.Invoke(ScheduledInvoke, 5f, this, null, token);
+            Profiler.BeginSample("DoInvoke");
+            host.scheduler.Invoke(ScheduledInvoke, invokeDelay, this, null, token);
+            Profiler.EndSample();
         }
 
         [ContextMenu("Invoke Repeating")]
         public void DoInvokeRepeating()
         {
-            host.scheduler.InvokeRepeating(ScheduledInvoke, 1f, 5f, this, null, token);
+            Profiler.BeginSample("DoInvokeRepeating");
+            host.scheduler.InvokeRepeating(ScheduledInvoke, repeatDelay, repeatInterval, this, null, token);
+            Profiler.EndSample();
         }
 
         [ContextMenu("Cancel Invoke")]
