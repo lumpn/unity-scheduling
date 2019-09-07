@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿//----------------------------------------
+// MIT License
+// Copyright(c) 2019 Jonas Boetel
+//----------------------------------------
+using System.Text;
 using System.Collections.Generic;
 using UnityEngine;
 

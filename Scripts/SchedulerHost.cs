@@ -1,5 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿//----------------------------------------
+// MIT License
+// Copyright(c) 2019 Jonas Boetel
+//----------------------------------------
 using UnityEngine;
 
 namespace Lumpn
@@ -14,15 +16,13 @@ namespace Lumpn
 
         void Awake()
         {
-            var time = Time.time;
-            scheduler = new Scheduler(time, initialCapacity);
+            scheduler = new Scheduler(Time.time, initialCapacity);
             main = this;
         }
 
         void Update()
         {
-            var time = Time.time;
-            scheduler.Update(time);
+            scheduler.Update(Time.time);
         }
     }
 }

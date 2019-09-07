@@ -1,38 +1,38 @@
-﻿#pragma warning disable CS0649
-
-using System.Collections;
-using System.Collections.Generic;
+﻿//----------------------------------------
+// MIT License
+// Copyright(c) 2019 Jonas Boetel
+//----------------------------------------
 using UnityEngine;
 using UnityEngine.Profiling;
+
+#pragma warning disable CS0649
 
 namespace Lumpn
 {
     public class InvokeDemo : MonoBehaviour
     {
         [SerializeField] private SchedulerHost host;
-        [SerializeField] private int invokeCounter;
 
-        [System.NonSerialized] private CancellationToken invokeToken = new CancellationToken();
-        [System.NonSerialized] private CancellationToken invokeRepeatingToken = new CancellationToken();
+        [System.NonSerialized] private CancellationToken token = new CancellationToken();
+        [System.NonSerialized] private int invokeCounter;
 
         [ContextMenu("Invoke")]
-        void InvokeSomething()
+        public void DoInvoke()
         {
-            invokeToken = new CancellationToken();
-            host.scheduler.Invoke(ScheduledInvoke, 5f, this, null, invokeToken);
+            host.scheduler.Invoke(ScheduledInvoke, 5f, this, null, token);
         }
 
         [ContextMenu("Invoke Repeating")]
-        void InvokeRepeating()
+        public void DoInvokeRepeating()
         {
-            host.scheduler.InvokeRepeating(ScheduledInvoke, 1f, 5f, this, null, invokeRepeatingToken);
+            host.scheduler.InvokeRepeating(ScheduledInvoke, 1f, 5f, this, null, token);
         }
 
         [ContextMenu("Cancel Invoke")]
-        void CancelInvokes()
+        public void DoCancelInvoke()
         {
-            invokeToken.Cancel();
-            invokeRepeatingToken.Cancel();
+            token.Cancel();
+            token = new CancellationToken();
         }
 
         private static void ScheduledInvoke(object owner, object state)
@@ -46,14 +46,6 @@ namespace Lumpn
             Profiler.BeginSample("ScheduledInvoke");
             invokeCounter++;
             Profiler.EndSample();
-        }
-
-        void OnGUI()
-        {
-            GUILayout.BeginHorizontal(GUI.skin.box);
-            GUILayout.Label("Invoke counter");
-            GUILayout.TextField(invokeCounter.ToString());
-            GUILayout.EndHorizontal();
         }
     }
 }
