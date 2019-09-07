@@ -3,7 +3,10 @@
 // Copyright(c) 2019 Jonas Boetel
 //----------------------------------------
 
-public interface ICancellationToken
+namespace Lumpn
 {
-    bool isCanceled { get; }
+    public interface ICancellationToken
+    {
+        bool isCanceled { get; }
+    }
 }
