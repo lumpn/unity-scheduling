@@ -2,9 +2,8 @@
 // MIT License
 // Copyright(c) 2019 Jonas Boetel
 //----------------------------------------
-using System.Text;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Text;
 
 namespace Lumpn
 {
@@ -119,15 +118,17 @@ namespace Lumpn
             return heap.GetEnumerator();
         }
 
-        public void DebugPrint()
+        public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
+            sb.Append("Heap(");
             foreach (var item in heap)
             {
                 sb.Append(item);
                 sb.Append(", ");
             }
-            Debug.Log(sb.ToString());
+            sb.Append("_)");
+            return sb.ToString();
         }
     }
 }

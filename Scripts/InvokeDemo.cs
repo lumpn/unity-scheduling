@@ -16,6 +16,8 @@ namespace Lumpn
         [System.NonSerialized] private CancellationToken token = new CancellationToken();
         [System.NonSerialized] private int invokeCounter;
 
+        public int InvokeCounter { get { return invokeCounter; } }
+
         [ContextMenu("Invoke")]
         public void DoInvoke()
         {

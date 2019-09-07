@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿//----------------------------------------
+// MIT License
+// Copyright(c) 2019 Jonas Boetel
+//----------------------------------------
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Lumpn

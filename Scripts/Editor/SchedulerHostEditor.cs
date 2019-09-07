@@ -22,6 +22,8 @@ namespace Lumpn
                 EditorGUILayout.BeginVertical(GUI.skin.box);
                 EditorGUILayout.IntField("Queue length", scheduler.QueueLength);
                 EditorGUILayout.EndVertical();
+
+                Repaint();
             }
         }
     }

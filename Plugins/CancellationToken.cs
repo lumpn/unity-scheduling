@@ -1,6 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿//----------------------------------------
+// MIT License
+// Copyright(c) 2019 Jonas Boetel
+//----------------------------------------
 
 public sealed class CancellationToken : ICancellationToken
 {

@@ -14,17 +14,20 @@ namespace Lumpn
         {
             base.OnInspectorGUI();
 
-            EditorGUILayout.BeginVertical(GUI.skin.box);
-            EditorGUILayout.IntField("Invoke Counter", serializedObject.FindProperty("invokeCounter").intValue);
-            EditorGUILayout.EndVertical();
-
             var demo = (InvokeDemo)target;
+
+            EditorGUILayout.BeginVertical(GUI.skin.box);
+            EditorGUILayout.IntField("Invoke Counter", demo.InvokeCounter);
 
             EditorGUILayout.BeginHorizontal();
             if (GUILayout.Button("Invoke")) demo.DoInvoke();
             if (GUILayout.Button("Invoke Repeating")) demo.DoInvokeRepeating();
             if (GUILayout.Button("Cancel Invoke")) demo.DoCancelInvoke();
             EditorGUILayout.EndHorizontal();
+
+            EditorGUILayout.EndVertical();
+
+            Repaint();
         }
     }
 }
