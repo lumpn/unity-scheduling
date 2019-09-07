@@ -2,9 +2,6 @@
 // MIT License
 // Copyright(c) 2019 Jonas Boetel
 //----------------------------------------
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using NUnit.Framework;
 
 namespace Lumpn
