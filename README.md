@@ -7,21 +7,24 @@ For example `MyUnityProject/Assets/ThirdParty/lumpn/unity-scheduler`.
 
 ## Usage
 ```csharp
-void DoInvoke()
+class MyClass
 {
-    scheduler.Invoke(InvokedMethod, invokeDelay, this, optionalState, optionalCancellationToken);
-}
+    void DoInvoke()
+    {
+        scheduler.Invoke(InvokedMethod, invokeDelay, this, optionalState, optionalCancellationToken);
+    }
 
-static void InvokedMethod(object owner, object state)
-{
-    var myClass = (MyClass)owner;
-    var myState = (MyState)state;
-    myClass.InvokeMethod(myState);
-}
+    static void InvokedMethod(object owner, object state)
+    {
+        var myClass = (MyClass)owner;
+        var myState = (MyState)state;
+        myClass.InvokeMethod(myState);
+    }
 
-void InvokedMethod(MyState state)
-{
-    // ...
+    void InvokedMethod(MyState state)
+    {
+        // ...
+    }
 }
 ```
 
