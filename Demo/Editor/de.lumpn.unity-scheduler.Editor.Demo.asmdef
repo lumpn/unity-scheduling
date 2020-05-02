@@ -1,0 +1,18 @@
+{
+    "name": "de.lumpn.unity-scheduler.Editor.Demo",
+    "references": [
+        "GUID:bf345ee65bc380847b81080499ede240",
+        "GUID:ef513d17754d1e44cb6e19aceb430a12"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

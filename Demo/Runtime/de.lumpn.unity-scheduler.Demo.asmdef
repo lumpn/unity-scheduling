@@ -1,0 +1,15 @@
+{
+    "name": "de.lumpn.unity-scheduler.Demo",
+    "references": [
+        "GUID:ef513d17754d1e44cb6e19aceb430a12"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
