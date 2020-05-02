@@ -4,8 +4,5 @@
 //----------------------------------------
 namespace Lumpn.Scheduling
 {
-    public interface ICancellationToken
-    {
-        bool isCanceled { get; }
-    }
+    public delegate void Callback(object owner, object state);
 }

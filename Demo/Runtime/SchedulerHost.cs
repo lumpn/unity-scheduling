@@ -4,12 +4,10 @@
 //----------------------------------------
 using UnityEngine;
 
-namespace Lumpn
+namespace Lumpn.Scheduling
 {
     public sealed class SchedulerHost : MonoBehaviour
     {
-        public static SchedulerHost main;
-
         [SerializeField] private int initialCapacity = 1000;
 
         [field: System.NonSerialized] public Scheduler scheduler { get; private set; }
@@ -17,7 +15,6 @@ namespace Lumpn
         void Start()
         {
             scheduler = new Scheduler(Time.time, initialCapacity);
-            main = this;
         }
 
         void Update()

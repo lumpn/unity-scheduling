@@ -5,9 +5,7 @@
 using UnityEngine;
 using UnityEngine.Profiling;
 
-#pragma warning disable CS0649
-
-namespace Lumpn
+namespace Lumpn.Scheduling
 {
     public class InvokeDemo : MonoBehaviour
     {

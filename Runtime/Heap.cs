@@ -5,7 +5,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lumpn
+namespace Lumpn.Scheduling
 {
     /// Minimum heap
     public sealed class Heap<T>

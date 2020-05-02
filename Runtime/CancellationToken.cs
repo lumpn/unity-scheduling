@@ -2,8 +2,7 @@
 // MIT License
 // Copyright(c) 2019 Jonas Boetel
 //----------------------------------------
-
-namespace Lumpn
+namespace Lumpn.Scheduling
 {
     public sealed class CancellationToken : ICancellationToken
     {
