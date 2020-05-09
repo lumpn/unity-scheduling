@@ -110,6 +110,22 @@ class Wizard
 }
 ```
 
+### InvokeRepeating
+```csharp
+class Wizard
+{
+    void CastSpell()
+    {
+        scheduler.InvokeRepeating(ApplyDamage, castDelay, repeatInterval, this, targetEnemy);
+    }
+    
+    static void ApplyDamage(object owner, object state)
+    {
+        // ...
+    }
+}
+```
+
 ## Notes
 * For convencience, create a singleton scheduler. See `SchedulerHost` for details.
 * Schedulers should get updated every frame. See `SchedulerHost` for details.
