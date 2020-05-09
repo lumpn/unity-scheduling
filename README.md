@@ -6,19 +6,19 @@ Download the entire repository from https://github.com/lumpn/unity-scheduler and
 
 ## Usage
 ```csharp
-    void CastFireball()
-    {
-        scheduler.InvokeRepeating(ApplyFireDamageOverTime, castDelay, repeatInterval, this, enemy);
-    }
-    
-    static void ApplyDamage(object owner, object state)
-    {
-        var wizard = (Wizard)owner;
-        var enemy = (Enemy)state;
-        
-        var damage = DamageSystem.CalculateFireDamage(wizard);
-        enemy.TakeDamage(damage);
-    }
+void CastFireball()
+{
+    scheduler.InvokeRepeating(ApplyFireDamageOverTime, castDelay, repeatInterval, this, enemy);
+}
+
+static void ApplyDamage(object owner, object state)
+{
+    var wizard = (Wizard)owner;
+    var enemy = (Enemy)state;
+
+    var damage = DamageSystem.CalculateFireDamage(wizard);
+    enemy.TakeDamage(damage);
+}
 ```
 
 ### Static method
