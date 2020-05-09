@@ -25,10 +25,9 @@ namespace Lumpn.Scheduling
         {
             this.time = time;
 
-            Task top;
-            while (TryDequeue(entries, time, out top))
+            while (TryDequeue(entries, time, out Task topTask))
             {
-                top.Invoke(this);
+                topTask.Invoke(this);
             }
         }
 
