@@ -1,14 +1,18 @@
 {
-  "name": "de.lumpn.unity-scheduler",
-  "version": "0.1.0",
+  "name": "de.lumpn.unity-scheduling",
+  "version": "1.0.0",
   "displayName": "Lumpn Scheduling",
-  "description": "A non-allocating Invoke/InvokeRepeating scheduler for Unity.",
+  "description": "Non-allocating Invoke/InvokeRepeating scheduling facilities.",
   "unity": "2017.1",
   "dependencies": {
     "com.unity.ext.nunit": "1.0.0"
   },
   "keywords": [
-    "scheduler"
+    "lumpn",
+    "scheduler",
+    "scheduling",
+    "Invoke",
+    "InvokeRepeating"
   ],
   "author": {
     "name": "Jonas Boetel",
