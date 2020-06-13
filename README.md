@@ -1,8 +1,8 @@
-# unity-scheduler
+# unity-scheduling
 A non-allocating Invoke/InvokeRepeating scheduler for Unity
 
 ## Installation
-Download the entire repository from https://github.com/lumpn/unity-scheduler and use Unity's built in package manager to [add package from disk](https://docs.unity3d.com/Manual/upm-ui-local.html).
+Download the entire repository from https://github.com/lumpn/unity-scheduling and use Unity's built in package manager to [add package from disk](https://docs.unity3d.com/Manual/upm-ui-local.html).
 
 ## Usage
 ```csharp
