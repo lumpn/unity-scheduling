@@ -1,11 +1,7 @@
 {
-    "name": "de.lumpn.unity-scheduler.Editor.Tests",
-    "references": [
-        "GUID:ef513d17754d1e44cb6e19aceb430a12"
-    ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "name": "de.lumpn.scheduling",
+    "references": [],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
