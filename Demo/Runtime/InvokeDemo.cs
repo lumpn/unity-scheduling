@@ -5,7 +5,7 @@
 using UnityEngine;
 using UnityEngine.Profiling;
 
-namespace Lumpn.Scheduling
+namespace Lumpn.Scheduling.Demo
 {
     public class InvokeDemo : MonoBehaviour
     {

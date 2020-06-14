@@ -8,7 +8,7 @@ using System.Text;
 namespace Lumpn.Scheduling
 {
     /// Minimum heap
-    public sealed class Heap<T>
+    internal sealed class Heap<T>
     {
         private readonly IComparer<T> comparer;
         private readonly List<T> heap;

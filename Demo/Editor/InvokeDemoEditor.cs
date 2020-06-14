@@ -5,7 +5,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Lumpn.Scheduling
+namespace Lumpn.Scheduling.Demo
 {
     [CustomEditor(typeof(InvokeDemo))]
     public class InvokeDemoEditor : Editor

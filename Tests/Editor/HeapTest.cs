@@ -4,7 +4,7 @@
 //----------------------------------------
 using NUnit.Framework;
 
-namespace Lumpn.Scheduling
+namespace Lumpn.Scheduling.Tests
 {
     [TestFixture]
     public sealed class HeapTest

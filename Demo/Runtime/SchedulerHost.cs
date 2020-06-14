@@ -4,7 +4,7 @@
 //----------------------------------------
 using UnityEngine;
 
-namespace Lumpn.Scheduling
+namespace Lumpn.Scheduling.Demo
 {
     public sealed class SchedulerHost : MonoBehaviour
     {
