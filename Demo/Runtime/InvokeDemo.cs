@@ -7,6 +7,7 @@ using UnityEngine.Profiling;
 
 namespace Lumpn.Scheduling.Demo
 {
+    [AddComponentMenu("")]
     public class InvokeDemo : MonoBehaviour
     {
         [SerializeField] private SchedulerHost host;

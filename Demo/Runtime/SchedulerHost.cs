@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace Lumpn.Scheduling.Demo
 {
+    [AddComponentMenu("")]
     public sealed class SchedulerHost : MonoBehaviour
     {
         [SerializeField] private int initialCapacity = 1000;
