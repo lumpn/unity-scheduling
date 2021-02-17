@@ -1,5 +1,6 @@
 {
-    "name": "de.lumpn.scheduling",
+    "name": "Lumpn.Scheduling",
+    "rootNamespace": "",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
