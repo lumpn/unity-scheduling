@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "com.unity.ext.nunit": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "de.lumpn.unity-scheduling": {
+      "version": "file:../../../",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.ext.nunit": "1.0.0"
+      }
+    }
+  }
+}
