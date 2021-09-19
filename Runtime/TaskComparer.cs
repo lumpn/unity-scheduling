@@ -6,8 +6,10 @@ using System.Collections.Generic;
 
 namespace Lumpn.Scheduling
 {
-    public sealed class TaskComparer : IComparer<Task>
+    internal sealed class TaskComparer : IComparer<Task>
     {
+        public static readonly TaskComparer Default = new TaskComparer();
+
         private static readonly Comparer<float> timeComparer = Comparer<float>.Default;
 
         public int Compare(Task a, Task b)

@@ -8,15 +8,10 @@ using UnityEngine;
 namespace Lumpn.Scheduling.Demo
 {
     [CustomEditor(typeof(InvokeDemo))]
-    public class InvokeDemoEditor : Editor
+    public class InvokeDemoEditor : Editor<InvokeDemo>
     {
-        public override void OnInspectorGUI()
+        public override void OnInspectorGUI(InvokeDemo demo)
         {
-            base.OnInspectorGUI();
-
-            var demo = (InvokeDemo)target;
-
-            EditorGUILayout.BeginVertical(GUI.skin.box);
             EditorGUILayout.IntField("Invoke Counter", demo.InvokeCounter);
 
             EditorGUILayout.BeginHorizontal();
@@ -24,8 +19,6 @@ namespace Lumpn.Scheduling.Demo
             if (GUILayout.Button("Invoke Repeating")) demo.DoInvokeRepeating();
             if (GUILayout.Button("Cancel Invoke")) demo.DoCancelInvoke();
             EditorGUILayout.EndHorizontal();
-
-            EditorGUILayout.EndVertical();
 
             Repaint();
         }

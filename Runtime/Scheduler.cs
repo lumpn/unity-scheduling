@@ -8,8 +8,6 @@ namespace Lumpn.Scheduling
 {
     public sealed class Scheduler
     {
-        private static readonly TaskComparer entryComparer = new TaskComparer();
-
         private readonly Heap<Task> entries;
         private float time;
 
@@ -17,7 +15,7 @@ namespace Lumpn.Scheduling
 
         public Scheduler(float time, int initialCapacity)
         {
-            this.entries = new Heap<Task>(entryComparer, initialCapacity);
+            this.entries = new Heap<Task>(TaskComparer.Default, initialCapacity);
             this.time = time;
         }
 

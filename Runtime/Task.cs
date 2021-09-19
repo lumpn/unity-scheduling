@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Lumpn.Scheduling
 {
-    public struct Task
+    internal struct Task
     {
         private readonly ICancellationToken token;
         private readonly Callback callback;
